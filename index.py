@@ -40,10 +40,9 @@ def init():
     fileName = input('File name:');
     count = int(input('How many elems:'))
     weight = int(input('How large digits (16 max):'))
-    os.makedirs(os.path.dirname('files/%s.json' % (fileName)), exist_ok=True)
+    os.makedirs(os.path.dirname('files/%s.json' % fileName), exist_ok=True)
     createJson('files/' + fileName, gener(count, weight).tolist())
     pass
 
-# json.dumps(your_data, ensure_ascii=False)
 if __name__ == "__main__":
     init()
